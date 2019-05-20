@@ -10,6 +10,7 @@ Don't forget to set your JAVA_HOME !
     - You can run JavaDoc with `gradle javadoc`
     - You can build the projet with `gradle build`
 - Gradle Wrapper
+- Docker
 
 ## How to run
 You can do `./gradlew bootRun`. That will start the Spring server. You can test with `curl localhost:8080`
