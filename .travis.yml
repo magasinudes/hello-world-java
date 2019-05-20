@@ -1,13 +1,13 @@
 language: java
-
 notifications:
   slack: projets6-groupe:ORCe5RaXqKbVOLUtg23X66PA
-
 addons:
   sonarcloud:
-    organization: "magasinudes" # the key of the org you chose at step #3
+    organization: magasinudes
     token:
-      secure: SONAR_TOKEN # encrypted value of your token
+      secure: SONAR_TOKEN
 script:
-  # other script steps might be done before running the actual analysis
-  - sonar-scanner
+- sonar-scanner
+env:
+  global:
+    secure: AoC0L/kkfkJZQicLRMFTEEkJPyiemSb8O2+wsm3l8oH7A+W1/5xIo7Yqo6qXnlHBeO/KxXUHWzxl/w8K0hIgRGG47aeFjrxW/fxqXJOBlfqAXpqFhU6iIgJLuQ6gW8gbrt+ACuAvfqZKMtO6uJ2ACsFApa58i/fgkaiuQupEu4wTtIG2zy2sDIxquBA3Z0EZWI8QN3RfBVREYRyzy1GdON+QoDDK4ZYcF4WkQ26B6jJ5TFbXSGGcdpyg/ORG2OOucQBBmsFaEOj/1WmcM/Va1tZItYmC7RhnCczUngZSWuDNvnPnCIMhmlgDn9hqnEriXmGVZNV8GU14dYlTCmfAdd2HO4TpMTHp3aOj/f3SLG0csY8O3Vw84jOuVZ390n7I5/orVK8l1VqXDm7TVlgkoFB3H6SWgrHd80dUTKUhhxMWjWIgk/xewL06KJC8eMIJlupzWDj4Lgc03klmp+7X2OnyRpzK3b4dGK+sumVy0FdaoAWCIdjcAlfex3OcLr9m1ke6SJSUIprSl5ClCZcMYxrXfJLya+K1WdntUCWkxHhZu9oBRLiZRIw9LUZZWbDYLI8Bb89/WWkAdvNvwqXu0D4ZVQmpyOVSy8dCQp3FVtGjtc3KCZlq0Pdtip2Juxi3bMtJufpwDxwUaNCEyAzQfnwjgXXrYtHmmKlTKTZX19w=
