@@ -1,1 +1,4 @@
 language: java
+
+notifications:
+  slack: projets6-groupe:ORCe5RaXqKbVOLUtg23X66PA
