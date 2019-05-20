@@ -11,6 +11,8 @@ Don't forget to set your JAVA_HOME !
     - You can build the projet with `gradle build`
 - Gradle Wrapper
 - Docker
+- Travis
+- Sonar
 
 ## How to run
 You can do `./gradlew bootRun`. That will start the Spring server. You can test with `curl localhost:8080`
