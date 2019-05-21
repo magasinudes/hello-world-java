@@ -1,13 +1,14 @@
 language: java
+dist: trusty
+
 notifications:
   slack: projets6-groupe:ORCe5RaXqKbVOLUtg23X66PA
+
 addons:
   sonarcloud:
-    organization: magasinudes
+    organization: "magasinudes" # the key of the org you chose at step #3
     token:
-      secure: SONAR_TOKEN
+      secure: "vqHMoXyBZTgWcWb7wVoZzzhkHhV5c0CCiums0PsnqQjTCY19p6ZP414QlPAnbudAQBsyMYSHAH1yCet/4rlfIVoGrxrMrpwOJQ6BzdyFcQv7b09/mqRZY4mpPJgKVLSBTpo+uOQtc5DAYPp56shjtBxjkwl+X7W/tBQY1xkHU6hv+kxy0xRENBu9XLySkDlnt0gPKTcS0/ew/vru01cV901r4L9WphmpPc8CcoyGpP8bulcE75CDJiywf37ceJB9wUtCTwjj0eXvgN1n/DUaCCQomBU0JuFNfnW9gk996mjcF4cVgLIzW3Bvz6EZ/WErAa8lmi2l7OTXzkTGyYdTWN0FKxePFJdcwv0OPOPx2//Gb4+GMZmqAY194+ymojhxiy9S4XI0aO7txyF4Rw1wfRWVTVVk4BjCHD8hNqjv/axetYEWu4o8WCQGJ4RhlHcuLmWOKrNpl7eV/dgs8p5V0qjMoXd5hHiVwDibQy1b9KRP7W5Ed/F6ar9wGCIvszqqwvg6wCdl/O2lSQ1ZcFoclv8nFZY/Fyfo6Fvshxyt3p/bNxwpS7FiV0gZZF/b0EDf6WnB9Wtk69Q2u5IQedpe5wd/PTZAunVoXVoUqucrv+JHnr7YJgEZJoSkge9xJPc2NZ+sm0lUHRs181OdskMZCU/SHkY9IJSFIfZ/NAhRIZw=" # encrypted value of your token
 script:
-- sonar-scanner
-env:
-  global:
-    secure: AoC0L/kkfkJZQicLRMFTEEkJPyiemSb8O2+wsm3l8oH7A+W1/5xIo7Yqo6qXnlHBeO/KxXUHWzxl/w8K0hIgRGG47aeFjrxW/fxqXJOBlfqAXpqFhU6iIgJLuQ6gW8gbrt+ACuAvfqZKMtO6uJ2ACsFApa58i/fgkaiuQupEu4wTtIG2zy2sDIxquBA3Z0EZWI8QN3RfBVREYRyzy1GdON+QoDDK4ZYcF4WkQ26B6jJ5TFbXSGGcdpyg/ORG2OOucQBBmsFaEOj/1WmcM/Va1tZItYmC7RhnCczUngZSWuDNvnPnCIMhmlgDn9hqnEriXmGVZNV8GU14dYlTCmfAdd2HO4TpMTHp3aOj/f3SLG0csY8O3Vw84jOuVZ390n7I5/orVK8l1VqXDm7TVlgkoFB3H6SWgrHd80dUTKUhhxMWjWIgk/xewL06KJC8eMIJlupzWDj4Lgc03klmp+7X2OnyRpzK3b4dGK+sumVy0FdaoAWCIdjcAlfex3OcLr9m1ke6SJSUIprSl5ClCZcMYxrXfJLya+K1WdntUCWkxHhZu9oBRLiZRIw9LUZZWbDYLI8Bb89/WWkAdvNvwqXu0D4ZVQmpyOVSy8dCQp3FVtGjtc3KCZlq0Pdtip2Juxi3bMtJufpwDxwUaNCEyAzQfnwjgXXrYtHmmKlTKTZX19w=
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
